@@ -9,7 +9,7 @@ import os
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-install_requires = ['distribute']
+install_requires = [] # ['distribute'] -- causes errors with more recent versions of setuptools.
 if sys.hexversion < 0x2070000:
     install_requires += ['argparse']
 setup(name='pyter',
